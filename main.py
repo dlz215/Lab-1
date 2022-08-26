@@ -23,9 +23,12 @@ sentence = input('Enter a sentence: ')
 words_list = sentence.split(' ')
 for word in words_list:
     word.lower()
-    string = word
     letters = [letter for letter in word]
-    print(letters)
+    letters[0] = letters[0].upper()
+
+print(words_list)
+
+    
 
 
 
