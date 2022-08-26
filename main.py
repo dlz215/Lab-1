@@ -25,8 +25,8 @@ for word in words_list:
     word.lower()
     string = word
     letters = [letter for letter in word]
-    letters[0] = letters[0].upper()
-    print[letters]
+    print(letters)
+
 
 
 
