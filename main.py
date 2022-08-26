@@ -1,3 +1,4 @@
+#PART 
 name = input('What is your name? ')
 birth_month = input('What month were you born in? ')
 
@@ -12,21 +13,58 @@ if birth_month.lower() == 'august':
 elif birth_month.lower() == 'september':
     print('It is your birthday next month')
 else:
-    print('')
+    print('Your birthday is not this month or next month')
 
-classes = input ('Please enter your classes seperated by a comma: ')
-class_list = classes.split(', ')
+#PART 2
+classes = input ('Please enter your classes separated by a comma: ')
+class_list = classes.split(',')
 for x in class_list:
+    x = x.strip()
     print(x)
 
-sentence = input('Enter a sentence: ')
-words_list = sentence.split(' ')
-for word in words_list:
-    word.lower()
-    letters = [letter for letter in word]
-    letters[0] = letters[0].upper()
+#PART 3
+camelcase = ''
 
-print(words_list)
+sentence = input('Enter a sentence: ')
+
+word_list = sentence.split(' ')
+
+for word in word_list:
+    # for any word in the list other than the first, break it up into a list of individual letters
+    if word_list.index(word) != 0:
+        captialized_word = ''
+        word = word.lower()
+        letters = [letter for letter in word]
+        # capitalize the first letter in the list
+        letters[0] = letters[0].upper()
+        # put the capitalized word back together and append to the final camelcase string
+        for letter in letters:
+            captialized_word = captialized_word + letter
+        camelcase = camelcase + captialized_word
+   
+    # for the first word in the list, simply add it to the final camelcase string
+    else:
+        word = word.lower()
+        camelcase = camelcase + word
+
+print(camelcase)
+
+
+            
+
+
+
+
+        
+
+
+  
+
+        
+
+
+
+
 
     
 
